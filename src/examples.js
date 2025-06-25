@@ -36,11 +36,13 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ខ', key: 'default-K_X' },
-          { cap: 'ម', key: ['longpress', 'default-K_M'], longpress: true },
-          { cap: '្ម', key: ['popup', 'popup-default-T_17D2_1798'] },
-          { cap: 'េ', key: ['longpress', 'default-K_E'], longpress: true },
-          { cap: 'ែ', key: ['popup', 'popup-default-K_E+shift'] },
-          { cap: 'រ', key: 'default-K_R' }
+          { cap: 'ម', key: ['flickstart', 'default-K_M'], flick: true },
+          { cap: '្ម', key: ['flickpopup', 'popup-default-T_17D2_1798'] },
+          { cap: 'េ', key: ['flickstart', 'default-K_E'], flick: true },
+          { cap: 'ែ', key: ['flickpopup', 'popup-default-K_E+shift', 'default-K_E'] },
+          { cap: 'រ', key: 'default-K_R' },
+          // { cap: '។',key: ['longpress', 'default-K_PERIOD'], longpress: true },
+          // { cap: '៕', key: ['popup', 'popup-default-K_PERIOD+shift'] },
         ],
         keys_nida_tablet: [
           { cap: 'ខ', key: 'default-K_X' },
@@ -114,10 +116,10 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ខ', key: 'default-K_X' },
-          { cap: 'េ', key: ['longpress', 'default-K_E'], longpress: true },
-          { cap: 'ែ', key: ['popup', 'popup-default-K_E+shift'] },
-          { cap: 'ម', key: ['longpress', 'default-K_M'], longpress: true },
-          { cap: '្ម', key: ['popup', 'popup-default-T_17D2_1798'] },
+          { cap: 'េ', key: ['flickstart', 'default-K_E'], flick: true },
+          { cap: 'ែ', key: ['flickpopup', 'popup-default-K_E+shift', 'default-K_E'] },
+          { cap: 'ម', key: ['flickstart', 'default-K_M'], flick: true },
+          { cap: '្ម', key: ['flickpopup', 'popup-default-T_17D2_1798'] },
           { cap: 'រ', key: 'default-K_R' }
         ],
         keys_nida_tablet: [
@@ -171,12 +173,12 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: 'ត', key: ['longpress', 'default-K_T'], longpress: true },
-          { cap: '្ត', key: ['popup', 'popup-default-T_17D2_178F'] },
-          { cap: 'រ', key: ['longpress', 'default-K_R'], longpress: true },
-          { cap: '្រ', key: ['popup', 'popup-default-T_17D2_179A'] },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
+          { cap: 'ត', key: ['flickstart', 'default-K_T'], flick: true },
+          { cap: '្ត', key: ['flickpopup', 'popup-default-T_17D2_178F'] },
+          { cap: 'រ', key: ['flickstart', 'default-K_R'], flick: true },
+          { cap: '្រ', key: ['flickpopup', 'popup-default-T_17D2_179A'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -239,12 +241,12 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: 'រ', key: ['longpress', 'default-K_R'], longpress: true },
-          { cap: '្រ', key: ['popup', 'popup-default-T_17D2_179A'] },
-          { cap: 'ត', key: ['longpress', 'default-K_T'], longpress: true },
-          { cap: '្ត', key: ['popup', 'popup-default-T_17D2_178F'] },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
+          { cap: 'រ', key: ['flickstart', 'default-K_R'], flick: true },
+          { cap: '្រ', key: ['flickpopup', 'popup-default-T_17D2_179A'] },
+          { cap: 'ត', key: ['flickstart', 'default-K_T'], flick: true },
+          { cap: '្ត', key: ['flickpopup', 'popup-default-T_17D2_178F'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
         ],
         keys_angkor_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -316,12 +318,12 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: 'ដ', key: ['longpress', 'default-K_D'], longpress: true },
-          { cap: '្ដ', key: ['popup', 'popup-default-T_17D2_178A'] },
-          { cap: 'រ', key: ['longpress', 'default-K_R'], longpress: true },
-          { cap: '្រ', key: ['popup', 'popup-default-T_17D2_179A'] },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
+          { cap: 'ដ', key: ['flickstart', 'default-K_D'], flick: true },
+          { cap: '្ដ', key: ['flickpopup', 'popup-default-T_17D2_178A'] },
+          { cap: 'រ', key: ['flickstart', 'default-K_R'], flick: true },
+          { cap: '្រ', key: ['flickpopup', 'popup-default-T_17D2_179A'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -414,12 +416,12 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: 'រ', key: ['longpress', 'default-K_R'], longpress: true },
-          { cap: '្រ', key: ['popup', 'popup-default-T_17D2_179A'] },
-          { cap: 'ដ', key: ['longpress', 'default-K_D'], longpress: true },
-          { cap: '្ដ', key: ['popup', 'popup-default-T_17D2_178A'] },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
+          { cap: 'រ', key: ['flickstart', 'default-K_R'], flick: true },
+          { cap: '្រ', key: ['flickpopup', 'popup-default-T_17D2_179A'] },
+          { cap: 'ដ', key: ['flickstart', 'default-K_D'], flick: true },
+          { cap: '្ដ', key: ['flickpopup', 'popup-default-T_17D2_178A'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -506,12 +508,12 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
-          { cap: 'រ', key: ['longpress', 'default-K_R'], longpress: true },
-          { cap: '្រ', key: ['popup', 'popup-default-T_17D2_179A'] },
-          { cap: 'ត', key: ['longpress', 'default-K_T'], longpress: true },
-          { cap: '្ត', key: ['popup', 'popup-default-T_17D2_178F'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
+          { cap: 'រ', key: ['flickstart', 'default-K_R'], flick: true },
+          { cap: '្រ', key: ['flickpopup', 'popup-default-T_17D2_179A'] },
+          { cap: 'ត', key: ['flickstart', 'default-K_T'], flick: true },
+          { cap: '្ត', key: ['flickpopup', 'popup-default-T_17D2_178F'] },
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -618,12 +620,12 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
-          { cap: 'រ', key: ['longpress', 'default-K_R'], longpress: true },
-          { cap: '្រ', key: ['popup', 'popup-default-T_17D2_179A'] },
-          { cap: 'ដ', key: ['longpress', 'default-K_D'], longpress: true },
-          { cap: '្ដ', key: ['popup', 'popup-default-T_17D2_178A'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
+          { cap: 'រ', key: ['flickstart', 'default-K_R'], flick: true },
+          { cap: '្រ', key: ['flickpopup', 'popup-default-T_17D2_179A'] },
+          { cap: 'ដ', key: ['flickstart', 'default-K_D'], flick: true },
+          { cap: '្ដ', key: ['flickpopup', 'popup-default-T_17D2_178A'] },
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -675,8 +677,8 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: '់', key: ['longpress', 'default-K_QUOTE'], longpress: true },
-          { cap: '៊', key: ['popup', 'popup-default-K_SLASH'] },
+          { cap: ['Shift', '៊ ៊'], key: ['default', 'default-K_SLASH'] },
+          //error, doesn't load the slash 
           { cap: 'ើ', key: 'default-K_COLON' },
           { cap: 'ប', key: 'default-K_B' },
         ],
@@ -759,8 +761,8 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: '់', key: ['longpress', 'default-K_QUOTE'], longpress: true },
-          { cap: '៉', key: ['popup', 'popup-default-K_QUOTE+shift'] },
+          { cap: '់', key: ['flickstart', 'default-K_QUOTE'], flick: true },
+          { cap: '៉', key: ['flickpopup', 'popup-default-K_QUOTE+shift'] },
           { cap: 'ើ', key: 'default-K_COLON' },
           { cap: 'ប', key: 'default-K_B' },
         ],
@@ -819,11 +821,12 @@ export const examples = [
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
           { cap: '់', key: ['longpress', 'default-K_QUOTE'], longpress: true },
-          { cap: '៊', key: ['popup', 'popup-default-K_SLASH'] },
+          { cap: '៊  ៊', key: ['popup', 'popup-default-K_SLASH'] },
           { cap: 'េ', key: 'default-K_E' },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
           { cap: 'ប', key: 'default-K_B' },
+          //also error because of K_SLASH
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -967,8 +970,8 @@ export const examples = [
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
           { cap: 'េ', key: 'default-K_E' },
-          { cap: 'ិ', key: ['longpress', 'default-K_I'], longpress: true },
-          { cap: 'ី', key: ['popup', 'popup-default-K_I+shift'] },
+          { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
+          { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
           { cap: 'ុ', key: 'default-K_U' },
           { cap: 'ប', key: 'default-K_B' },
         ],
@@ -1045,10 +1048,10 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ញ', key: 'default-K_J+shift' },
-          { cap: '់', key: ['longpress', 'default-K_QUOTE'], longpress: true },
-          { cap: '៉', key: ['popup', 'popup-default-K_QUOTE+shift'] },
-          { cap: 'ា', key: ['longpress', 'default-K_A'], longpress: true },
-          { cap: 'ាំ', key: ['popup', 'popup-default-K_A+shift'] },
+          { cap: '់', key: ['flickstart', 'default-K_QUOTE'], flick: true },
+          { cap: '៉', key: ['flickpopup', 'popup-default-K_QUOTE+shift'] },
+          { cap: 'ា', key: ['flickstart', 'default-K_A'], flick: true },
+          { cap: 'ាំ', key: ['flickpopup', 'popup-default-K_A+shift'] },
         ],
         keys_nida_tablet: [
           { cap: ['Shift','ញ'], key: ['shift', 'shift-K_J'] },
@@ -1166,8 +1169,8 @@ export const examples = [
         keys_angkor_mobile: [
           { cap: 'ញ', key: 'default-K_J+shift' },
           { cap: 'ុ', key: 'default-K_U' },
-          { cap: 'ម', key: ['longpress', 'default-K_M'], longpress: true },
-          { cap: 'ំ', key: ['popup', 'popup-default-K_M+shift'] },
+          { cap: ['Shift', 'ំ'], key: ['shift', 'shift-K_M'] },
+          //work but shift key doesn't appear
           { cap: 'ា', key: 'default-K_A' },
         ],
         keys_nida_tablet: [

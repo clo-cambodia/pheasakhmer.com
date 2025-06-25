@@ -34,7 +34,7 @@ export function animateKeystrokes(items) {
   // alert(JSON.stringify(items));
 }
 
-function pressKeyElement(id, down, longpress, popup) {
+function pressKeyElement(id, down, longpress, popup, dragTo = null, isFlick = false) {
   const element = document.getElementById(id);
   if(!element) return;
 
@@ -44,6 +44,10 @@ function pressKeyElement(id, down, longpress, popup) {
     element.style.background = 'green';
     if(popup) {
       element.dispatchEvent(new MouseEvent('mousemove', {clientX: x, clientY: y, bubbles: true, buttons: 1}));
+    } else if (isFlick) {
+      element.dispatchEvent(new MouseEvent('mousedown', {clientX: x, clientY: y, buttons: 1}));
+      // Simulate drag down (just move cursor downward a bit)
+      element.dispatchEvent(new MouseEvent('mousemove', {clientX: x,clientY: y + 60, bubbles: true, buttons: 1}));
     } else if(longpress) {
       element.dispatchEvent(new MouseEvent('mousedown', {clientX: x, clientY: y, buttons: 1}));
     } else {
@@ -55,6 +59,9 @@ function pressKeyElement(id, down, longpress, popup) {
     if(popup) {
       element.dispatchEvent(new MouseEvent('mouseup',{clientX: x, clientY: y, buttons: 1}));
     }
+    else{
+      element.dispatchEvent(new MouseEvent('mouseup',{clientX: x, clientY: y, buttons: 1}));
+    }
   }
 }
 
@@ -62,12 +69,26 @@ let lastLongpress = null;
 
 function pressKey(key) {
   if(Array.isArray(key)) {
-    // modifier + key
-    if(key[0] == 'longpress') {
-      pressKeyElement(key[1]/*'default-K_'+key[1].toUpperCase()*/, true, true);
+    const type = key[0];
+    const base = key[1];
+
+    if (type === 'longpress') {
+      pressKeyElement(base, true, true);
       lastLongpress = key;
-    } else if(key[0] == 'popup') {
-      pressKeyElement(/*'popup-default-'+*/key[1], true, false, true);
+    } else if(type === 'popup') {
+      pressKeyElement(base, true, false, true);
+
+    } else if(type === 'flickstart') {
+      pressKeyElement(base, true, false, false, null, true);
+      lastLongpress = ['longpress', base]; 
+
+    } else if(type === 'flickpopup') {
+      pressKeyElement(base, true, false, true);
+
+    } else if(type === 'modifier') {
+      keyman.osk.vkbd.layerId = 'shift';
+      pressKeyElement(base, true);
+
     } else {
       // TODO: assuming SHIFT only for now
       keyman.osk.vkbd.layerId='shift';
@@ -82,15 +103,17 @@ function pressKey(key) {
 
 function releaseKey(key) {
   if(Array.isArray(key)) {
-    // modifier + key
-    if(key[0] == 'popup') {
-      pressKeyElement(key[1], false, false, true);
+    const type = key[0];
+    const base = key[1];
+
+    if(type === 'popup' || type === 'flickpopup') {
+      pressKeyElement(base, false, false, true);
       if(lastLongpress) {
         pressKeyElement(lastLongpress[1], false, true);
         lastLongpress = null;
       }
-    } else if(key[0] != 'longpress') {
-      pressKeyElement(key[1], false);
+    } else if(type !== 'longpress' && type !== 'flickstart') {
+      pressKeyElement(base, false);
       keyman.osk.vkbd.layerId='default';
     }
     // pressKeyElement('shift-K_SHIFT', true);

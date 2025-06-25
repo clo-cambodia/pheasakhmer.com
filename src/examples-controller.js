@@ -42,7 +42,10 @@ function keysToHtml(keys) {
     html.push( '<span>' + cap.map(k => `<kbd>${k}</kbd>`).join('+') + '</span>');
     if(key.longpress) {
       html.push('⬆');
-    } else {
+    }else if(key.flick) {
+      html.push('⬇');
+    }
+     else {
       html.push(' ');
     }
   }
