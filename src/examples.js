@@ -677,8 +677,7 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: ['Shift', '៊ ៊'], key: ['default', 'default-K_SLASH'] },
-          //error, doesn't load the slash 
+          { cap: ['Shift', ' ៊'], key: ['shift', 'shift-K_SLASH+default'] },
           { cap: 'ើ', key: 'default-K_COLON' },
           { cap: 'ប', key: 'default-K_B' },
         ],
@@ -820,13 +819,11 @@ export const examples = [
         ],
         keys_angkor_mobile: [
           { cap: 'ស', key: 'default-K_S' },
-          { cap: '់', key: ['longpress', 'default-K_QUOTE'], longpress: true },
-          { cap: '៊  ៊', key: ['popup', 'popup-default-K_SLASH'] },
+          { cap: ['Shift', ' ៊'], key: ['shift', 'shift-K_SLASH+default'] },
           { cap: 'េ', key: 'default-K_E' },
           { cap: 'ិ', key: ['flickstart', 'default-K_I'], flick: true },
           { cap: 'ី', key: ['flickpopup', 'popup-default-K_I+shift'] },
           { cap: 'ប', key: 'default-K_B' },
-          //also error because of K_SLASH
         ],
         keys_nida_tablet: [
           { cap: 'ស', key: 'default-K_S' },
@@ -1170,7 +1167,6 @@ export const examples = [
           { cap: 'ញ', key: 'default-K_J+shift' },
           { cap: 'ុ', key: 'default-K_U' },
           { cap: ['Shift', 'ំ'], key: ['shift', 'shift-K_M'] },
-          //work but shift key doesn't appear
           { cap: 'ា', key: 'default-K_A' },
         ],
         keys_nida_tablet: [

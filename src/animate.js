@@ -77,22 +77,15 @@ function pressKey(key) {
       lastLongpress = key;
     } else if(type === 'popup') {
       pressKeyElement(base, true, false, true);
-
     } else if(type === 'flickstart') {
       pressKeyElement(base, true, false, false, null, true);
       lastLongpress = ['longpress', base]; 
-
     } else if(type === 'flickpopup') {
       pressKeyElement(base, true, false, true);
-
-    } else if(type === 'modifier') {
-      keyman.osk.vkbd.layerId = 'shift';
-      pressKeyElement(base, true);
-
     } else {
       // TODO: assuming SHIFT only for now
       keyman.osk.vkbd.layerId='shift';
-      pressKeyElement(/*'shift-K_'+*/key[1]/*.toUpperCase()*/, true);
+      pressKeyElement(/*'shift-K_'+*/key[1]/*.toUpperCase()*/, true, true);
     }
     // pressKeyElement('default-K_SHIFT', false);
   } else {
