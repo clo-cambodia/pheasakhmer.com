@@ -155,7 +155,7 @@ function showExample(index) {
 
     const row = document.createElement('div');
     row.className = 'row';
-    row.id='example-'+n.toString();
+    row.id='example-'+alt.id;
 
     const colKeys = document.createElement('div');
     colKeys.className = 'col-md';
